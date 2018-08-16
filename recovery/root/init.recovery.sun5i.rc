@@ -1,0 +1,13 @@
+on init
+
+    #insmod tp driver
+    insmod /ft5x_ts.ko
+
+    #insmod nand driver
+    insmod /nand.ko
+
+    mkdir /databk
+
+service erase_misc /sbin/sh -c "echo -en '\0' > /dev/block/nandf; sync"
+    oneshot
+    seclabel u:r:recovery:s0

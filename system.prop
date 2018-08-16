@@ -1,0 +1,8 @@
+#
+# system.prop for Allwinner A13
+#
+ro.hardware=sun5i
+ro.secure=0
+ro.allow.mock.location=1
+ro.debuggable=1
+persist.sys.usb.config=mass_storage,adb
